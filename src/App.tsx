@@ -1,14 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.scss";
+import Typical from "react-typical";
+import plane from "./assets/images/plane.gif";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Harish Bollam</h1>
-      </header>
+      <header className="App-header"></header>
+      <section className="intro-sec">
+        <img src={plane} alt="plane" className="plane" />
+        <span className="title">Harish Bollam</span>
+        <p className="typical-wrapper">
+          I'm a{" "}
+          <Typical
+            loop={Infinity}
+            wrapper="b"
+            steps={[
+              "Front-End Engineer",
+              3000,
+              "Blogger",
+              3000,
+              "Mentor",
+              3000,
+            ]}
+          />
+        </p>
+      </section>
     </div>
   );
 }
